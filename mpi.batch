@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --account=cis431_531     ### change this to your actual charge account 
+#SBATCH --partition=fat          ### queue to submit to
+#SBATCH --job-name=mpiDFT	     ### job name
+#SBATCH --output=%A.out			 ### file in which to store job stdout
+#SBATCH --error=%A.err			 ### file in which to store job stderr
+#SBATCH --time=2                 ### wall-clock time limit, in minutes
+#SBATCH --mem=1000M              ### memory limit per node, in MB
+#SBATCH --nodes=1                ### number of nodes to use
+#SBATCH --ntasks-per-node=4      ### number of tasks to launch per node
+#SBATCH --cpus-per-task=1        ### number of cores for each task
+
+module load openmpi/2.1
+mpirun -np $SLURM_NTASKS ./main

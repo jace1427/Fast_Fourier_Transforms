@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#SBATCH --job-name=fft
+
+#SBATCH --output=out/fft_%j.out
+
+#SBATCH --error=out/fft_%j.err
+
+#SBATCH --partition=short
+
+#SBATCH --time=00:10:00
+
+#SBATCH --nodes=1
+
+#SBATCH --ntasks-per-node=1
+
+#SBATCH --cpus-per-task=28
+
+#SBATCH --account=cis431_531
+
+export OMP_NUM_THREADS=28
+
+./main -n 131072
+
