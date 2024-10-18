@@ -4,21 +4,13 @@
 
 ### Fourier Transformer ###
 
-* This repository is for a student implementation of the Fourier Transformation algorithm. The project  
-* Version
+* This repository is for a student implementation of the Fourier Transformation algorithm. 
 
 ### How do I get set up? ###
 
 * Compile with "make" and run with "./main". Object files can be removed with "make clean".
 * Dependencies
 The LodePNG library is required for image manipulation. It is provided in the repo, but if there is any issue with the files you can download it at [LodePNG](https://lodev.org/lodepng/).
-* Launch options
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
 
 ### Who do I talk to? ###
 
